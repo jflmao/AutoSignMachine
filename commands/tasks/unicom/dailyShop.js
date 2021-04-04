@@ -79,9 +79,9 @@ var dailyShop = {
         } else {
             console.error('抽奖失败', result.RspMsg)
         }
-    }
+    },
     // 花费积分来抽奖-支持定向积分
-    /*dailyintegrallottery: async (axios, options) => {
+    dailyintegrallottery: async (axios, options) => {
         let encryptmobile = await dailyShop.encryptmobile(axios, options)
         let activty = await dailyShop.getActivty(axios, {
             ...options,
@@ -101,7 +101,7 @@ var dailyShop = {
             }
         }
 
-        console.info('尝试5次，花费10定向积分兑换抽奖机会')
+        /*console.info('尝试5次，花费10定向积分兑换抽奖机会')
 
         await require('./integral').getDxDetail(axios, options)
 
@@ -119,7 +119,7 @@ var dailyShop = {
                 ...options,
                 encryptmobile
             })
-        } while (--n > 0)
-    }*/
+        } while (--n > 0)*/屏蔽兑换定向积分抽奖
+    }
 }
 module.exports = dailyShop
